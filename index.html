@@ -1,53 +1,76 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Klebinho - Portfólio</title>
     <link rel="stylesheet" href="./Public/styles/styles.css">
-    <title>Kleber Silva Developer</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#education">Formação</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
+            <a href="#home">Início</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#projects">Projetos</a>
+            <a href="#contact">Contato</a>
         </nav>
+        <div class="intro">
+            <h1>Olá, eu sou Kleber Silva</h1>
+            <p>Mais conhecido como Dev Klebinho. Sou instrutor de programação especializado em desenvolvimento de jogos e apaixonado por projetos educacionais e jogos indie.</p>
+        </div>
     </header>
-    <main>
-        <section class="home">
-            <h1>Oi, sou o <br> <span>Kleber Silva</span></h1>
-            <h3>Instutor, Programador e Gestor de comunidade</h3>
-            <img src="" alt="kleber-perfil">
-        </section>
-        <section class="about">
-            <h3>
-                Sou instutor de programação de jogos apaixonado por transformar códigos em aventuras épicas. 
-                Graduando Análise e Desenvolvimento de Sistemas pela Uninter, 
-                atuo na área de educação de tecnologia há mais de 3 anos,
-                produtor de conteúdo e gestor da comunidade <span><a href="#">Aprendiz de Game Dev</a></span>.
-            </h3>
-            <ul>
-                <li><a href=""><img src="" alt="LinkedIn"></a></li>
-                <li><a href=""><img src="" alt="Instagram"></a></li>
-                <li><a href=""><img src="" alt="Itchio"></a></li>
-                <li><a href=""><img src="" alt="Github"></a></li>
-            </ul>
-        </section>
-        <section class="portfolio">
-            <h1>Portfólio</h1>
-        </section>
-        <section class="education">
-            <h1>Formação</h1>
-        </section>
-        <section class="contact">
-            <h1>Contato</h1>
-        </section>
-    </main>
-    <footer></footer>
+
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill">Construct 3</div>
+            <div class="skill">Unity</div>
+            <div class="skill">C#</div>
+            <div class="skill">.NET</div>
+            <div class="skill">Python</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">itch.io</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projetos</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto. Este projeto é focado em...</p>
+                <a href="https://github.com/devklebinho/projeto1" target="_blank">Ver mais</a>
+            </div>
+            <div class="project">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto. Este projeto aborda...</p>
+                <a href="https://github.com/devklebinho/projeto2" target="_blank">Ver mais</a>
+            </div>
+            <div class="project">
+                <h3>Projeto 3</h3>
+                <p>Descrição breve do projeto. Neste projeto, eu...</p>
+                <a href="https://github.com/devklebinho/projeto3" target="_blank">Ver mais</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kleberkgns/" target="_blank"><img src="./Public/Assets/icons/social/icons8-linkedin-100.png" alt="LinkedIn"></a>
+            <a href="https://devklebinho.itch.io" target="_blank"><img src="./Public/Assets/icons/social/icons8-itch-io-480.png" alt="Itchio"></a>
+            <a href="https://www.youtube.com/channel/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-youtube-100.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-instagram-100.png" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-tiktok-100.png" alt="TikTok"></a>
+            <a href="https://www.twitch.tv/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-twitch-100.png" alt="Twitch"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dev Klebinho. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./Public/scripts.js"></script>
 </body>
 </html>
