@@ -3,74 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Klebinho - Portfólio</title>
+    <title>Kleber Silva | Portfolio</title>
     <link rel="stylesheet" href="./Public/styles/styles.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <header>
-        <nav>
-            <a href="#home">Início</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#projects">Projetos</a>
-            <a href="#contact">Contato</a>
-        </nav>
-        <div class="intro">
-            <h1>Olá, eu sou Kleber Silva</h1>
-            <p>Mais conhecido como Dev Klebinho. Sou instrutor de programação especializado em desenvolvimento de jogos e apaixonado por projetos educacionais e jogos indie.</p>
+        <div class="nav-container">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu">
+                <a href="#vertentes">Atuação</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#mentorias">Mentorias</a>
+                <a href="#contato">Contato</a>
+            </nav>
         </div>
     </header>
 
-    <section id="skills">
-        <h2>Habilidades</h2>
-        <div class="skills-container">
-            <div class="skill">Construct 3</div>
-            <div class="skill">Unity</div>
-            <div class="skill">C#</div>
-            <div class="skill">.NET</div>
-            <div class="skill">Python</div>
-            <div class="skill">Git</div>
-            <div class="skill">GitHub</div>
-            <div class="skill">itch.io</div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projetos</h2>
-        <div class="projects-container">
-            <div class="project">
-                <h3>Projeto 1</h3>
-                <p>Descrição breve do projeto. Este projeto é focado em...</p>
-                <a href="https://github.com/devklebinho/projeto1" target="_blank">Ver mais</a>
-            </div>
-            <div class="project">
-                <h3>Projeto 2</h3>
-                <p>Descrição breve do projeto. Este projeto aborda...</p>
-                <a href="https://github.com/devklebinho/projeto2" target="_blank">Ver mais</a>
-            </div>
-            <div class="project">
-                <h3>Projeto 3</h3>
-                <p>Descrição breve do projeto. Neste projeto, eu...</p>
-                <a href="https://github.com/devklebinho/projeto3" target="_blank">Ver mais</a>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <h2>OLÁ, EU SOU O DEV KLEBINHO</h2>
+            <h1>Kleber <span>Silva</span></h1>
+            <p>Estudante de Análise e Desenvolvimento de Sistemas focado em construir soluções robustas em C# .NET, criar universos através do Game Dev e transformar realidades por meio do ensino de tecnologia.</p>
+            <div class="cta-buttons">
+                <a href="#contato" class="btn btn-primary">Fale Comigo</a>
+                <a href="#sobre" class="btn btn-secondary">Conhecer Trajetória</a>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contato</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/kleberkgns/" target="_blank"><img src="./Public/Assets/icons/social/icons8-linkedin-100.png" alt="LinkedIn"></a>
-            <a href="https://devklebinho.itch.io" target="_blank"><img src="./Public/Assets/icons/social/icons8-itch-io-480.png" alt="Itchio"></a>
-            <a href="https://www.youtube.com/channel/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-youtube-100.png" alt="YouTube"></a>
-            <a href="https://www.instagram.com/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-instagram-100.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-tiktok-100.png" alt="TikTok"></a>
-            <a href="https://www.twitch.tv/devklebinho" target="_blank"><img src="./Public/Assets/icons/social/icons8-twitch-100.png" alt="Twitch"></a>
+    <!-- VERTENTES SECTION -->
+    <section id="vertentes" class="section-container">
+        <h2 class="section-title">Áreas de Atuação</h2>
+        <div class="verticais-grid">
+            
+            <!-- DEV .NET -->
+            <div class="vertical-card">
+                <div class="card-icon">💻</div>
+                <h3>Dev .NET & Backend</h3>
+                <p>Desenvolvimento de software estável focado em arquiteturas escaláveis, lógica orientada a objetos (POO) e manipulação de banco de dados sob ambiente Linux (Zorin OS).</p>
+                <div class="tech-icons-grid">
+                    <div class="icon-box"><img src="Public/Assets/icons/100px/c-sharp.png" alt="C#" title="C#"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/DotNet.svg" alt="DOTNET" title=".NET"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/50px/icons8-git-50.png" alt="Git" title="Git"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/50px/icons8-python-50.png" alt="Python" title="Python"></div>
+                </div>
+            </div>
+
+            <!-- GAME DEV -->
+            <div class="vertical-card">
+                <div class="card-icon">🕹️</div>
+                <h3>Game Development</h3>
+                <p>Criação e programação de mecânicas de jogos interativos, prototipagem ágil e forte atuação técnica e de gestão de equipes em Game Jams de forma multidisciplinar.</p>
+                <div class="tech-icons-grid">
+                    <div class="icon-box"><img src="Public/Assets/icons/100px/unity-icon.png" alt="Unity" title="Unity"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/100px/construct-logo.png" alt="Construct 3" title="Construct 3"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/50px/Godot_icon_50px.png" alt="Godot" title="Godot"></div>
+                </div>
+            </div>
+
+            <!-- PROFESSOR DE TI -->
+            <div class="vertical-card">
+                <div class="card-icon">🎓</div>
+                <h3>Professor de TI & Educador</h3>
+                <p>Docência prática em lógica, tecnologia e desenvolvimento de games. Projetos ativos de inclusão digital para todas as faixas etárias e facilitação de grupos de idiomas.</p>
+                <div class="tech-icons-grid">
+                    <div class="icon-box"><img src="Public/Assets/icons/scratch-cat.png" alt="scratch" title="Scratch"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/window-10-logo.webp" alt="windows" title="Windows"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/" alt="JavaScript" title="JavaScript"></div>
+                    <div class="icon-box"><img src="Public/Assets/icons/50px/icons8-nodejs-50.png" alt="Node.js" title="Node.js"></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
+    <!-- ABOUT & SOCIAL IMPACT SECTION -->
+    <section id="sobre" class="bg-alternate">
+        <div class="section-container">
+            <h2 class="section-title">Tecnologia e Impacto Social</h2>
+            <div class="about-content">
+                <p>Atualmente, atuo como <strong>Professor de TI na Prefeitura da Cidade do Recife</strong>, lecionando na Biblioteca Pública Dr. Joaquim Suassuna (Biblioteca da Passarela) e no Compaz Leda Alves (Pina). Minha rotina envolve desde a alfabetização digital para crianças até cursos de lógica e criação de jogos digitais para jovens e adultos.</p>
+                
+                <p>Além disso, atuo como o responsável técnico pelos recursos e sistemas utilizados na unidade da Passarela, unindo o conhecimento de infraestrutura e software para manter o ambiente de aprendizado operando perfeitamente.</p>
+                
+                <div class="highlight-box">
+                    "Acredito que o verdadeiro papel da tecnologia vai além de compilar linhas de código. O impacto real está em traduzir essa complexidade para capacitar pessoas e transformar comunidades."
+                </div>
+
+                <p>Buscando sempre a evolução global, também coordeno e facilito um <strong>grupo de estudos voluntário de Língua Inglesa (Nível B1)</strong> focado na comunidade local, aplicando metodologias ativas de aprendizado para aproximar as pessoas das oportunidades globais que o idioma oferece.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORIAS SECTION -->
+    <section id="mentorias" class="section-container">
+        <div class="mentoria-box">
+            <span class="badge-vagas">VAGAS EM BREVE</span>
+            <h3>Aulas Particulares & Mentorias em Grupo</h3>
+            <p>Se você quer aprender a dar os primeiros passos na programação, entender como criar seus próprios jogos do zero ou dominar a lógica de computação de forma descomplicada, estou estruturando turmas de mentoria personalizadas (individuais ou em grupos de no máximo 3 pessoas).</p>
+            <a href="mailto:contato@klebersilva.dev.br?subject=Interesse%20em%20Mentoria%20-%20Site" class="btn btn-primary">Tenho Interesse</a>
+        </div>
+    </section>
+
+    <!-- CONTACT & SOCIALS SECTION -->
+    <section id="contato" class="bg-alternate">
+        <div class="section-container">
+            <h2 class="section-title">Vamos Conectar?</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Fique à vontade para me acompanhar nas redes ou mandar um e-mail profissional.</p>
+            
+            <div style="text-align: center; margin-bottom: 35px;">
+                <p style="font-size: 1.25rem; font-weight: bold; color: var(--accent-gold); letter-spacing: 0.5px;">contato@klebersilva.dev.br</p>
+            </div>
+
+            <div class="social-grid">
+                <a href="https://github.com/devklebinho" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-visual-studio-100.png" alt="GitHub" class="social-icon"> GitHub
+                </a>
+                <a href="https://devklebinho.itch.io" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-itch-io-48.png" alt="Itch.io" class="social-icon"> Itch.io
+                </a>
+                <a href="https://bsky.app/profile/devklebinho.bsky.social" target="_blank" class="social-link">
+                    🦋 BlueSky
+                </a>
+                <a href="https://www.youtube.com/@devklebinho" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-youtube-100.png" alt="YouTube" class="social-icon"> YouTube
+                </a>
+                <a href="https://www.tiktok.com/@devklebinho" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-tiktok-100.png" alt="TikTok" class="social-icon"> TikTok
+                </a>
+                <a href="https://www.instagram.com/devklebinho" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-instagram-100.png" alt="Instagram" class="social-icon"> Instagram
+                </a>
+                <a href="https://twitch.tv/devklebinho" target="_blank" class="social-link">
+                    <img src="Public/Assets/icons/social/icons8-twitch-100.png" alt="Twitch" class="social-icon"> Twitch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 Dev Klebinho. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Dev Klebinho | Kleber Silva. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="./Public/scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
