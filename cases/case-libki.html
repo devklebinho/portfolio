@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case: Implantação e Migração Libki | Kleber Silva</title>
+    <!-- Note o ../styles/styles.css para acessar a pasta a partir da subpasta cases/ -->
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Estilos específicos para a página de Artigo/Case */
+        .case-header {
+            padding: 160px 24px 60px 24px;
+            text-align: center;
+            background-color: var(--bg-gray);
+            border-bottom: 1px solid rgba(233, 179, 60, 0.1);
+        }
+        .case-meta {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .case-header h1 {
+            font-size: 2.5rem;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            color: var(--text-light);
+            line-height: 1.3;
+        }
+        .case-body {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+        .case-body p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        .case-body strong {
+            color: var(--text-light);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: transform 0.2s;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        .tech-badge-group {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .tech-badge {
+            background-color: rgba(24, 25, 27, 0.6);
+            border: 1px solid rgba(233, 179, 60, 0.2);
+            color: var(--text-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">klebersilva<span>.dev.br</span></a>
+            <nav class="nav-menu">
+                <a href="../index.html#vertentes">Atuação</a>
+                <a href="../index.html#sobre">Sobre</a>
+                <a href="../index.html#mentorias">Mentorias</a>
+                <a href="../index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CASE HEADER -->
+    <section class="case-header">
+        <div class="case-meta">Case de sucesso / Infraestrutura & Gestão</div>
+        <h1>Implantação e Migração de Sistema de Gerenciamento de Acesso em Biblioteca Pública</h1>
+        <div class="tech-badge-group">
+            <span class="tech-badge">Libki (Open Source)</span>
+            <span class="tech-badge">Ubuntu Server 20.04</span>
+            <span class="tech-badge">SysAdmin & Infra</span>
+            <span class="tech-badge">Virtualização</span>
+        </div>
+    </section>
+
+    <!-- CASE CONTENT -->
+    <article class="case-body">
+        <a href="../index.html#vertentes" class="back-link">← Voltar para a Home</a>
+
+        <p>Desde a inauguração da <strong>Biblioteca Pública Dr. Joaquim Suassuna</strong>, onde atuo desde sua fundação, participei ativamente das decisões relacionadas à infraestrutura de atendimento ao público. Um dos pontos críticos desde o início foi a necessidade de um sistema de gerenciamento de acesso aos computadores, semelhante aos utilizados em Lan Houses, capaz de organizar o uso das máquinas, controlar tempo de acesso e garantir um atendimento eficiente.</p>
+
+        <p>No momento da abertura da biblioteca, optei pela implantação do <strong>CyberSquare</strong>, uma solução proprietária mais simples e de rápida implementação. Essa decisão foi estratégica: o objetivo era colocar a unidade em funcionamento sem atrasos, garantindo estabilidade mínima e facilidade de uso para a equipe, em um contexto de inauguração e alta demanda inicial.</p>
+
+        <p>Com o passar do tempo, no entanto, o CyberSquare passou a apresentar limitações importantes. A ausência de atualizações (a última versão datava de 2015), instabilidades recorrentes e a incerteza gerada por mudanças no modelo de negócio do fornecedor evidenciaram riscos à continuidade do serviço. Diante desse cenário, decidi conduzir uma transição planejada para uma solução mais sustentável e alinhada com os princípios do serviço público.</p>
+
+        <p>A escolha pelo <strong>Libki</strong>, uma ferramenta open source de gerenciamento de acesso, foi resultado de pesquisa técnica e avaliação de longo prazo. Diferentemente da solução anterior, o Libki exigiu um processo mais profundo de implementação, envolvendo leitura de documentação, testes extensivos e compreensão de sua arquitetura. Para isso, realizei experimentos em ambientes virtualizados, configurei o servidor principal em <strong>Ubuntu 20.04</strong> e integrei estações clientes em Windows, garantindo que todos os computadores estivessem corretamente conectados em rede.</p>
+
+        <p>A implantação não foi imediata, mas cuidadosa. Testes de instalação, comunicação, autenticação e estabilidade foram realizados antes da adoção em produção, assegurando que o atendimento ao público não fosse interrompido. O resultado foi uma migração bem-sucedida de um software proprietário instável para uma solução livre, ativa e confiável.</p>
+
+        <p>Atualmente, além da operação do sistema, estou produzindo dois materiais complementares: um <strong>manual técnico</strong>, voltado à instalação e replicação do Libki em outras unidades da rede Bibliotecas pela Paz, e um <strong>manual operacional</strong>, destinado ao treinamento das equipes locais. O objetivo é transformar essa experiência em um modelo replicável, ampliando o impacto da solução para além da biblioteca onde atuo.</p>
+
+        <p>Esse projeto consolidou minha atuação não apenas como executor técnico, mas como alguém capaz de tomar decisões estratégicas, planejar infraestrutura, avaliar riscos e pensar soluções sustentáveis desde a concepção até a manutenção de serviços públicos digitais.</p>
+        
+        <div style="margin-top: 50px; padding: 25px; background: var(--bg-gray); border-radius: 6px; text-align: center;">
+            <p style="margin-bottom: 0; font-style: italic; font-size: 1rem;">Precisa de soluções estruturadas de software livre ou automação de infraestrutura para o seu negócio ou projeto? <a href="../index.html#contato" style="color: var(--accent-gold); font-weight: bold;">Entre em contato</a>.</p>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Dev Klebinho | Kleber Silva. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
