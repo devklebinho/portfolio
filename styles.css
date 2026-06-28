@@ -292,9 +292,6 @@ header {
 /* ==========================================================================
    5. PROJETOS EM DESTAQUE (SHOWCASE)
    ========================================================================== */
-.bg-projects-showcase {
-    background-color: #1f2124; 
-}
 
 .projects-showcase-list {
     display: flex;
