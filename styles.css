@@ -1,3 +1,6 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,7 +24,72 @@ body {
     line-height: 1.6;
 }
 
-/* NAVBAR */
+/* Estruturas de Seções Genéricas */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 24px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.1rem;
+    margin-bottom: 55px;
+    color: var(--text-light);
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    margin: 12px auto 0 auto;
+    border-radius: 2px;
+}
+
+.bg-alternate {
+    background-color: var(--bg-gray);
+}
+
+/* Botões Genéricos (Componentes) */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    border: 2px solid var(--accent-gold);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-gold);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 2px solid var(--bg-gray);
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+    background-color: rgba(233, 179, 60, 0.02);
+}
+
+
+/* ==========================================================================
+   2. NAVBAR & HEADER
+   ========================================================================== */
 header {
     background-color: rgba(24, 25, 27, 0.95);
     position: fixed;
@@ -40,18 +108,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 18px 24px;
-}
-
-.logo {
-    font-size: 1.35rem;
-    font-weight: bold;
-    color: var(--text-light);
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
-
-.logo span {
-    color: var(--accent-gold);
 }
 
 .nav-menu {
@@ -88,7 +144,10 @@ header {
     transition: 0.3s ease;
 }
 
-/* HERO SECTION */
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
 .hero {
     min-height: 85vh;
     display: flex;
@@ -96,6 +155,7 @@ header {
     justify-content: center;
     padding: 140px 24px 80px 24px;
     text-align: center;
+    background-color: var(--bg-gray);
 }
 
 .hero-container {
@@ -128,75 +188,20 @@ header {
     margin-bottom: 40px;
 }
 
-/* CTA BUTTONS */
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 16px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 32px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    font-size: 0.95rem;
-}
 
-.btn-primary {
-    background-color: var(--accent-gold);
-    color: var(--bg-dark);
-    border: 2px solid var(--accent-gold);
-}
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--accent-gold);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: var(--text-light);
-    border: 2px solid var(--bg-gray);
-}
-
-.btn-secondary:hover {
-    border-color: var(--accent-gold);
-    color: var(--accent-gold);
-    background-color: rgba(233, 179, 60, 0.02);
-}
-
-/* SECTIONS STRUCTURE */
-.section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 90px 24px;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.1rem;
-    margin-bottom: 55px;
-    color: var(--text-light);
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 45px;
-    height: 3px;
-    background-color: var(--accent-gold);
-    margin: 12px auto 0 auto;
-    border-radius: 2px;
-}
-
-.bg-alternate {
+/* ==========================================================================
+   4. ÁREAS DE ATUAÇÃO (VERTICAIRES GRID)
+   ========================================================================== */
+.bg-projects-showcase {
     background-color: var(--bg-gray);
 }
 
-/* VERTICAIS GRID */
 .verticais-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -240,7 +245,15 @@ header {
     margin-bottom: 25px;
 }
 
-/* TECH ICONS INNER GRID */
+.case-link {
+    transition: opacity 0.25s ease;
+}
+
+.case-link:hover {
+    opacity: 0.85;
+}
+
+/* Interno dos Cards: Tech Icons */
 .tech-icons-grid {
     display: flex;
     flex-wrap: wrap;
@@ -275,7 +288,118 @@ header {
     object-fit: contain;
 }
 
-/* ABOUT SECTION */
+
+/* ==========================================================================
+   5. PROJETOS EM DESTAQUE (SHOWCASE)
+   ========================================================================== */
+.bg-projects-showcase {
+    background-color: #1f2124; 
+}
+
+.projects-showcase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.showcase-card {
+    display: flex;
+    background-color: var(--bg-gray);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(233, 179, 60, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.showcase-card:hover {
+    transform: translateX(4px);
+    border-color: var(--accent-gold);
+}
+
+.showcase-visual {
+    background-color: rgba(24, 25, 27, 0.5);
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+    flex-shrink: 0;
+}
+
+.showcase-emoji {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+.showcase-info {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.showcase-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.showcase-info h3 {
+    font-size: 1.4rem;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.showcase-info p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.showcase-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.showcase-techs span {
+    font-size: 0.8rem;
+    background-color: var(--bg-dark);
+    color: rgba(247, 251, 253, 0.85);
+    padding: 3px 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.showcase-btn {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease;
+}
+
+.showcase-card:hover .showcase-btn {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    border-color: var(--accent-gold);
+}
+
+
+/* ==========================================================================
+   6. SOBRE & IMPACTO SOCIAL
+   ========================================================================== */
 .about-content {
     max-width: 800px;
     margin: 0 auto;
@@ -296,7 +420,10 @@ header {
     font-size: 1.15rem;
 }
 
-/* MENTORIAS SECTION */
+
+/* ==========================================================================
+   7. MENTORIAS
+   ========================================================================== */
 .mentoria-box {
     background-color: var(--bg-gray);
     border-radius: 12px;
@@ -332,7 +459,10 @@ header {
     letter-spacing: 1px;
 }
 
-/* CONTACT & SOCIALS GRID */
+
+/* ==========================================================================
+   8. CONTATO & REDES SOCIAIS (SOCIAL GRID)
+   ========================================================================== */
 .social-grid {
     display: flex;
     flex-wrap: wrap;
@@ -370,7 +500,10 @@ header {
     object-fit: contain;
 }
 
-/* FOOTER */
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
 footer {
     background-color: #111213;
     text-align: center;
@@ -380,7 +513,10 @@ footer {
     border-top: 1px solid var(--bg-gray);
 }
 
-/* RESPONSIVIDADE */
+
+/* ==========================================================================
+   10. MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================================================== */
 @media (max-width: 992px) {
     .verticais-grid {
         grid-template-columns: 1fr;
@@ -392,6 +528,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Navbar Mobile */
     .menu-toggle {
         display: flex;
     }
@@ -425,6 +562,7 @@ footer {
     .menu-toggle.active .bar:nth-child(1) { transform: translateY(11px) rotate(45deg); }
     .menu-toggle.active .bar:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
 
+    /* Hero Mobile */
     .hero h1 {
         font-size: 2.3rem;
     }
@@ -437,5 +575,21 @@ footer {
     }
     .btn {
         width: 100%;
+    }
+
+    /* Cards de Projetos (Showcase) Mobile */
+    .showcase-card {
+        flex-direction: column;
+    }
+    
+    .showcase-visual {
+        width: 100%;
+        padding: 30px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    .showcase-info {
+        padding: 24px;
     }
 }
