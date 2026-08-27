@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioLocker — Ajuda e Downloads</title>
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --card-bg: #2b2b2b;
+            --accent-color: #007acc;
+            --accent-hover: #005999;
+            --text-color: #f4f4f4;
+            --text-muted: #aaa;
+            --warning-bg: #3a2e1b;
+            --warning-border: #d97706;
+            --border-color: #444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .btn-download:hover {
+            background-color: var(--accent-hover);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .img-preview {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin: 10px 0 15px 0;
+            display: block;
+        }
+
+        .img-preview.setup {
+            max-width: 380px;
+            margin: 15px auto;
+        }
+
+        .warning-box {
+            background-color: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>AudioLocker</h1>
+        <p class="subtitle">Utilitário leve para controle e limitação de volume no Windows</p>
+        <a href="https://github.com/bibliopassarela/audiolocker/releases" target="_blank" class="btn-download">
+            Baixar Última Versão (GitHub)
+        </a>
+    </header>
+
+    <section>
+        <h2>O que é o AudioLocker?</h2>
+        <p>O <strong>AudioLocker</strong> é uma aplicação para Windows desenvolvida para manter o volume do áudio do computador sempre dentro de um limite máximo definido, protegida por senha de administrador. É ideal para ambientes compartilhados, como bibliotecas, escolas ou escritórios.</p>
+    </section>
+
+    <section>
+        <h2>Como Baixar e Instalar</h2>
+        <ol>
+            <li>
+                Acesse a página de lançamentos no GitHub e baixe o executável <code>AudioLocker.exe</code> localizado na seção <strong>Assets</strong>:
+                <img src="exe.png" alt="Download do AudioLocker.exe nas Assets da Release" class="img-preview">
+            </li>
+            <li>Não é necessária instalação. Basta dar dois cliques no arquivo baixado para executá-lo.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Como Usar</h2>
+        <ol>
+            <li>
+                <strong>Primeira Execução:</strong> Ao abrir o aplicativo pela primeira vez, uma janela solicitará a criação de uma <em>Senha de Administrador</em>, o <em>Volume Máximo (%)</em> e o tempo padrão para desbloqueios:
+                <img src="setup audiolocker.png" alt="Tela de Configuração Inicial do AudioLocker" class="img-preview setup">
+            </li>
+            <li><strong>Execução em Segundo Plano:</strong> O app rodará na barra de tarefas (ao lado do relógio do Windows). O ícone permanecerá <strong>vermelho</strong> enquanto o áudio estiver restrito.</li>
+            <li><strong>Desbloquear o Som:</strong> Clique com o botão direito no ícone da bandeja, escolha <em>Desbloquear Áudio</em> e digite sua senha. O ícone ficará <strong>verde</strong> durante o período liberado.</li>
+            <li><strong>Encerrar o App:</strong> Clique com o botão direito no ícone da bandeja, selecione <em>Sair</em> e confirme a senha.</li>
+        </ol>
+
+        <div class="warning-box">
+            <strong>Requisito do Sistema:</strong> Certifique-se de ter ao menos um dispositivo de saída de áudio habilitado no Windows antes de iniciar o aplicativo.
+        </div><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioLocker — Ajuda e Downloads</title>
+    <style>
+        :root {
+            --bg-color: #1e1e1e;
+            --card-bg: #2b2b2b;
+            --accent-color: #007acc;
+            --accent-hover: #005999;
+            --text-color: #f4f4f4;
+            --text-muted: #aaa;
+            --warning-bg: #3a2e1b;
+            --warning-border: #d97706;
+            --border-color: #444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 750px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .btn-download {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+        }
+
+        .btn-download:hover {
+            background-color: var(--accent-hover);
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        .img-preview {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin: 12px 0 5px 0;
+            display: block;
+        }
+
+        .img-preview.small {
+            max-width: 380px;
+            margin: 12px auto 5px auto;
+        }
+
+        .img-preview.tray {
+            max-width: 300px;
+            margin: 12px auto 5px auto;
+        }
+
+        .warning-box {
+            background-color: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>AudioLocker</h1>
+        <p class="subtitle">Utilitário leve para controle e limitação de volume no Windows</p>
+        <a href="https://github.com/bibliopassarela/audiolocker/releases" target="_blank" class="btn-download">
+            Baixar Última Versão (GitHub)
+        </a>
+    </header>
+
+    <section>
+        <h2>O que é o AudioLocker?</h2>
+        <p>O <strong>AudioLocker</strong> é uma aplicação para Windows desenvolvida para manter o volume do áudio do computador sempre dentro de um limite máximo definido, protegida por senha de administrador. É ideal para ambientes compartilhados, como bibliotecas, escolas ou escritórios.</p>
+    </section>
+
+    <section>
+        <h2>Como Baixar e Instalar</h2>
+        <ol>
+            <li>
+                Acesse a página de lançamentos no GitHub e baixe o arquivo executável <code>AudioLocker.exe</code> localizado na seção <strong>Assets</strong>:
+                <img src="exe.png" alt="Download do AudioLocker.exe nas Assets da Release" class="img-preview">
+            </li>
+            <li>Não é necessária instalação. Basta dar dois cliques no arquivo baixado para executá-lo.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Como Usar</h2>
+        <ol>
+            <li>
+                <strong>Primeira Execução:</strong> Ao abrir o app pela primeira vez, configure a <em>Senha de Administrador</em>, o <em>Volume Máximo (%)</em> e o tempo padrão para liberação:
+                <img src="setup audiolocker.png" alt="Tela de Configuração Inicial do AudioLocker" class="img-preview small">
+            </li>
+            <li>
+                <strong>Execução em Segundo Plano:</strong> O app roda na bandeja do sistema (ao lado do relógio). O ícone ficará <strong>vermelho</strong> enquanto o limite de áudio estiver ativo:
+                <img src="bandeja.png" alt="Ícone do AudioLocker ativo na bandeja do Windows" class="img-preview tray">
+            </li>
+            <li>
+                <strong>Desbloquear o Som:</strong> Clique com o botão direito no ícone da bandeja para abrir o menu suspenso e selecione <em>Desbloquear Áudio</em>:
+                <img src="desbloquear.png" alt="Menu suspenso na bandeja para desbloquear áudio" class="img-preview tray">
+            </li>
+            <li>
+                <strong>Encerrar o App:</strong> Para fechar o programa, clique em <em>Sair</em> no menu da bandeja e insira a senha cadastrada:
+                <img src="sair.png" alt="Tela de confirmação de senha para encerrar o app" class="img-preview small">
+            </li>
+        </ol>
+
+        <div class="warning-box">
+            <strong>Requisito do Sistema:</strong> Certifique-se de ter ao menos um dispositivo de saída de áudio habilitado no Windows antes de iniciar o aplicativo.
+        </div>
+    </section>
+
+    <footer>
+        <p>AudioLocker — Desenvolvido por <a href="https://klebersilva.dev.br" target="_blank">Kleber Silva</a></p>
+        <p>Código-fonte disponível no <a href="https://github.com/bibliopassarela/audiolocker" target="_blank">GitHub</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
+    </section>
+
+    <footer>
+        <p>AudioLocker — Desenvolvido por <a href="https://klebersilva.dev.br" target="_blank">Kleber Silva</a></p>
+        <p>Código-fonte disponível no <a href="https://github.com/bibliopassarela/audiolocker" target="_blank">GitHub</a></p>
+    </footer>
+</div>
+
+</body>
+</html>
